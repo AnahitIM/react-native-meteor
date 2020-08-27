@@ -1,4 +1,4 @@
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import Data from '../Data';
 import { hashPassword } from '../../lib/utils';
@@ -57,7 +57,7 @@ module.exports = {
       }
     );
   },
-  logoutOtherClients(callback = () => {}) {
+  logoutOtherClients(callback = () => { }) {
     call('getNewToken', (err, res) => {
       if (err) return callback(err);
 
